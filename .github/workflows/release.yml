@@ -25,7 +25,6 @@ jobs:
 
         cp freetype/include/ft2build.h .
         cp ft2build.h source/
-        mkdir source
         cp -r include source
         
         make
