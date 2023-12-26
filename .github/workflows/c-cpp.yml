@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: prepare apt
-      run:  apt update && apt full-upgrade
+      run:  apt update && apt full-upgrade -y
     - name: dependencies
       run: |
         apt install *lib*free*type* -y
