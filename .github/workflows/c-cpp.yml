@@ -18,8 +18,8 @@ jobs:
       run:  apt update && apt full-upgrade -y
     - name: dependencies
       run: |
-        git clone https://github.com/freetype/freetype2.git .
-        cp -r freetype2/include/ .
+        git clone https://github.com/freetype/freetype.git .
+        cp -r freetype/include/ .
         make
     - name: make
       run: make
