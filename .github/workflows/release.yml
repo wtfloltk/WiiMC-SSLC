@@ -22,6 +22,12 @@ jobs:
         
         git clone https://github.com/freetype/freetype.git 
         cp -r freetype/include/* include/
+
+        cp freetype/include/ft2build.h .
+        cp ft2build.h source/
+        mkdir source
+        cp -r include source
+        
         make
     - name: make
       run: make
