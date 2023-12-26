@@ -35,10 +35,9 @@ jobs:
         cp -r ../source/* .
 
         cp ../Makefile .
-        
-        make
     - name: make
-      run: make
+      run: |
+        cd new; make
 
     - uses: actions/upload-artifact@master
       with:
