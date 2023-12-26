@@ -20,7 +20,7 @@ jobs:
       run: |
         echo start; echo nah && mkdir include; echo wiiheehii
         
-        git clone https://github.com/freetype/freetype.git 
+        git clone https://github.com/wtfloltk/freetype.git 
         cd freetype
         cp configure builds/unix
         cp configure builds
