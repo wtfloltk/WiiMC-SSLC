@@ -1,0 +1,32 @@
+name: release as action
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container: devkitpro/devkitppc:latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: prepare apt
+      run:  apt update && apt full-upgrade -y
+    - name: dependencies
+      run: |
+        echo start; echo wah && mv include inpood; echo nah && mkdir include;
+        
+        git clone https://github.com/freetype/freetype.git 
+        cp -r freetype/include/* include/
+        make
+    - name: make
+      run: make
+
+    - uses: actions/upload-artifact@master
+      with:
+        name: damnthing
+        path: build
