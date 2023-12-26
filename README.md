@@ -1,3 +1,6 @@
+trying to fix "DVD PLAYBACK NOT SUPPORTED ON THIS WII" happening in the middle of dvd playback on wii u :S
+
+
 # WiiMC-SS features:
 - Embedded cover art in MP3, MP4 (AAC, ALAC), FLAC, OGG, WMA, and AIFF.
 - Dynamic cover art updating from Tunein, Yggdrasil Radio, and ANISON.FM.
