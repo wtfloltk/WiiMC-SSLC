@@ -18,11 +18,12 @@ jobs:
       run:  apt update && apt full-upgrade -y
     - name: dependencies
       run: |
-        apt install *free*type* -y
-        apt full-upgrade
-        git clone --recursive https://github.com/freetype/freetype.git
+        dpkg --add-architecture ppc // not native for amd64 (ibm)
+        dpkg --add-architecture arm64 // not native for amd64 (nintendo)
+        dpkg --add-architecture aarach64 // same as above with dif software impl (apple???)
+        dpkg --add-architecture i386 // intel's 64/32bit(canruneither??imamdusersodno) bullshit soso imo
         cd freetype
-        make install
+        make
     - name: make
       run: make
 
