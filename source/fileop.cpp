@@ -159,7 +159,7 @@ static void * devicecallback (void *arg)
 
 		if(isInserted[DEVICE_DVD])
 		{
-			if(!dvd->isInserted())
+			/*if(!dvd->isInserted())
 			{
 				dvdLastUsed = 0;
 				isInserted[DEVICE_DVD] = false;
@@ -175,7 +175,7 @@ static void * devicecallback (void *arg)
 				}
 				devicesChanged = true;
 			}
-			else if(dvdLastUsed)
+			else */if(dvdLastUsed)
 			{
 				if(diff_sec(dvdLastUsed, gettime()) > 60)
 				{
