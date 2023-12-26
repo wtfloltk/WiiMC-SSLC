@@ -32,6 +32,8 @@ jobs:
         cp -r ../source/* .
         cp -r include/freetype/* .
         cp -r ../source/* .
+
+        cp ../Makefile .
         
         make
     - name: make
