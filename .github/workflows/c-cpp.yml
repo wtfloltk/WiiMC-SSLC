@@ -14,6 +14,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+    - name: dependencies
+      run: apt install *lib*free*type* -y
     - name: make
       run: make
 
