@@ -21,6 +21,15 @@ jobs:
         echo start; echo nah && mkdir include; echo wiiheehii
         
         git clone https://github.com/freetype/freetype.git 
+        cd freetype
+        make
+        cmake .
+        make
+        make install
+        ./configure
+        make
+        make install
+        cd ..
         cp -r freetype/include/* include/
 
         cp freetype/include/ft2build.h .
