@@ -20,6 +20,9 @@ jobs:
       run: |
         apt install *free*type* -y
         apt full-upgrade
+        git clone --recursive https://github.com/freetype/freetype.git
+        cd freetype
+        make install
     - name: make
       run: make
 
