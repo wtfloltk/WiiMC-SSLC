@@ -21,33 +21,12 @@ jobs:
         export CC=powerpc-eabi-gcc
       
         echo start; echo nah && mkdir include; echo wiiheehii
-        
-        git clone https://github.com/wtfloltk/freetype.git ilost
-        cd ilost
-        mkdir fmlkillmoi
-        cd fmlkillmoi
-        cmake ../
+
         make
-        make install
-        echo makeinstallyallfoolsforshureifyourelikemii
-        cd ..
-        cp -r freetype/include/* include/
-
-        cp freetype/include/ft2build.h .
-        cp ft2build.h source/
-        cp -r include source
-
-        mkdir new
-        cd new
-        cp -r ../source/* .
-        cp -r include/* .
-        cp -r include/freetype/* .
-        cp -r ../source/* .
-
-        cp ../Makefile .
+        
     - name: make
       run: |
-        cd new; make
+        make
 
     - uses: actions/upload-artifact@master
       with:
