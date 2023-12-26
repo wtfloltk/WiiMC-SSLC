@@ -22,9 +22,7 @@ jobs:
         
         git clone https://github.com/freetype/freetype.git 
         cd freetype
-        make
-        cmake .
-        make
+        ./configure
         make install
         cd ..
         cp -r freetype/include/* include/
