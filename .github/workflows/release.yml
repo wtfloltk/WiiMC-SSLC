@@ -22,6 +22,8 @@ jobs:
         
         git clone https://github.com/freetype/freetype.git 
         cd freetype
+        cp configure builds/unix
+        cp configure builds
         make
         make
         make
