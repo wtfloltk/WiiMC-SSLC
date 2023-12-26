@@ -18,7 +18,7 @@ jobs:
       run:  apt update && apt full-upgrade -y
     - name: dependencies
       run: |
-        apt install libfreetype6 -y
+        apt install *free*type* -y
         apt full-upgrade
     - name: make
       run: make
