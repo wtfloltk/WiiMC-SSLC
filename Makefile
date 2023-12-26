@@ -41,7 +41,7 @@ LDFLAGS		=	-g $(MACHDEP) -specs=wiimc.spec -Wl,-wrap,memcpy
 #---------------------------------------------------------------------------------
 LIBS    := -lmplayerwii -lavformat -lavcodec -lswscale -lavutil \
                         -ljpeg -ldi -liso9660 -liconv -lpng -lz \
-                        -lfat -lwiiuse -lbte -logc -lfreetype -lmxml -ltinysmb -lexif
+                        -lfat -lwiiuse -lbte -logc -lfreetype -lmxml -ltinysmb -lexif -lfreetype2
 
 ifeq ($(ENABLE_NTFS), 1)
 CFLAGS += -DWANT_NTFS
