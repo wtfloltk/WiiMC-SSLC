@@ -24,7 +24,7 @@
 #define FREETYPEGX_H_
 
 #include <gccore.h>
-#include <ft2build.h>
+#include "include/ft2build.h"
 #include FT_FREETYPE_H
 #include FT_BITMAP_H
 
