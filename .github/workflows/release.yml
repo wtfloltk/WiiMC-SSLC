@@ -1,4 +1,4 @@
-name: release as action
+name: release as action your watching me its spying or e-stalking
 
 on:
   push:
@@ -30,6 +30,7 @@ jobs:
         mkdir new
         cd new
         cp -r ../source/* .
+        cp -r include/* .
         cp -r include/freetype/* .
         cp -r ../source/* .
 
