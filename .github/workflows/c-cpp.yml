@@ -18,10 +18,10 @@ jobs:
       run:  apt update && apt full-upgrade -y
     - name: dependencies
       run: |
-        dpkg --add-architecture ppc // not native for amd64 (ibm)
-        dpkg --add-architecture arm64 // not native for amd64 (nintendo)
-        dpkg --add-architecture aarach64 // same as above with dif software impl (apple???)
-        dpkg --add-architecture i386 // intel's 64/32bit(canruneither??imamdusersodno) bullshit soso imo
+        dpkg --add-architecture ppc && echo "not native for amd64 (ibm)"
+        dpkg --add-architecture arm64 && echo "not native for amd64 (nintendo) ARM after 1980s since nintendo is the brand listed on the 1989 dmg arm cpu before arm became a more standalone name, 2004 ds might list arm as it tho, switch def lists arm for cpu on the chip itself"
+        dpkg --add-architecture aarach64 && echo "same as above with dif software impl (apple???) ARM"
+        dpkg --add-architecture i386 && "intel's 64/32bit(canruneither??imamdusersodno) bullshit soso imo"
         cd freetype
         make
     - name: make
