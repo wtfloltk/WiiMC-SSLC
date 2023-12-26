@@ -26,9 +26,6 @@ jobs:
         cmake .
         make
         make install
-        ./configure
-        make
-        make install
         cd ..
         cp -r freetype/include/* include/
 
