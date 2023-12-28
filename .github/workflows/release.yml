@@ -20,7 +20,7 @@ jobs:
       run: |
         export CC=powerpc-eabi-gcc
         cd libs
-        git clone --recursive https://github.com/Maschell/libntfs-wiiu/tree/master
+        git clone --recursive https://github.com/Maschell/libntfs-wiiu
         cd libntfs-wiiu
         make install
         
