@@ -20,16 +20,7 @@ jobs:
       run: |
         export CC=powerpc-eabi-gcc
         cd libs
-        make clean
-        make
-        cd ..
-        cd source
-        cd mplayer
-        make clean
-        make
-        cd ..
-        make clean 
-        make
+        for i in */; do cd "$i"; make; cd ..; done;
         
     - name: make
       run: |
