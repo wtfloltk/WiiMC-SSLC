@@ -4,8 +4,8 @@ COMMAND1 = (CC=$(DEVKITPPC)/bin/powerpc-eabi-gcc CXX=$(DEVKITPPC)/bin/powerpc-ea
 all: dir1 dir2 dir3
 
 dir1:
-	cd fribidi && $(COMMAND1)
+	cd fribidi && chmod +x configure && $(COMMAND1)
 dir2:
-	cd libexif && $(COMMAND1)
+	cd libexif && chmod +x configure && $(COMMAND1)
 dir3:
-	cd libiconv && $(COMMAND1)
+	cd libiconv && chmod +x configure && $(COMMAND1)
