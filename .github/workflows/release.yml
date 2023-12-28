@@ -20,10 +20,12 @@ jobs:
       run: |
         export CC=powerpc-eabi-gcc
         cd libs
+        chmod +x configure
         make -j66
         cd ..
         cd source
         cd mplayer
+        chmod +x configure
         make -j66
         cd ..
         make -j66
