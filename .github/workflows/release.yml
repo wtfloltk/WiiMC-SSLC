@@ -20,13 +20,13 @@ jobs:
       run: |
         export CC=powerpc-eabi-gcc
         cd libs
-        make -j66
+        make
         cd ..
         cd source
         cd mplayer
-        make -j66
+        make
         cd ..
-        make -j66
+        make
         
     - name: make
       run: |
