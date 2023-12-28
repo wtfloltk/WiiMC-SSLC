@@ -19,7 +19,7 @@ jobs:
     - name: dependencies
       run: |
         export CC=powerpc-eabi-gcc
-        make all -j66
+        make build -j66
         
     - name: make
       run: |
