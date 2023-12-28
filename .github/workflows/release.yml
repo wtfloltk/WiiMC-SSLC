@@ -19,10 +19,7 @@ jobs:
     - name: dependencies
       run: |
         export CC=powerpc-eabi-gcc
-      
-        echo start; echo nah && mkdir include; echo wiiheehii
-
-        make
+        make all -j66
         
     - name: make
       run: |
