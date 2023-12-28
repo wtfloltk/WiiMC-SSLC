@@ -19,7 +19,14 @@ jobs:
     - name: dependencies
       run: |
         export CC=powerpc-eabi-gcc
-        make build -j66
+        cd libs
+        make -j66
+        cd ..
+        cd source
+        cd mplayer
+        make -j66
+        cd ..
+        make -j66
         
     - name: make
       run: |
@@ -28,4 +35,4 @@ jobs:
     - uses: actions/upload-artifact@master
       with:
         name: damnthing
-        path: new/build
+        path: build
